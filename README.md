@@ -2,7 +2,7 @@
 
 ## Install Overlay
 
-`root # layman -o https://raw.githubusercontent.com/robertov82008/rrrj/master/profiles/repositories.xml f -a rrrj`
+`root # layman -o https://raw.githubusercontent.com/robertov82008/rrrj/master/profiles/repositories.xml -f -a rrrj`
 
 `root # layman -a rrrj`
 
