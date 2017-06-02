@@ -34,3 +34,7 @@ root # layman \
 `project-overlay- $ git push`
 
 `root # layman-overlay-maker`
+
+#### Generate Manifest
+
+`project/category/app $ ebuild app.ebuild manifest` 
