@@ -25,16 +25,14 @@ HOMEPAGE="https://atom.io"
 # MY_PN_B="atom-beta"
 # MY_PV="1.18.0-beta2"
 
-
-if [[ $PN == *-bin* ]]
-then
-	MY_PN_B="atom-beta"
-else
-	MY_PN_B=$MY_PN
-fi
-
 MY_PN="atom"
 MY_PV=$PV
+MY_PN_B=$MY_PN
+
+if [[ $PN == *-beta* ]]
+then
+	MY_PN_B="atom-beta"
+fi
 
 if [[ $PV == *_alpha* ]] || [[ $PV == *_beta* ]] || [[ $PV == *_pre* ]]
 then
