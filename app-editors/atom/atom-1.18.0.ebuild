@@ -144,11 +144,11 @@ enodegyp_atom() {
 			--nodedir="$(get_electron_nodedir)" $@ || die
 }
 
-easar() {
-	local asar="${WORKDIR}/$(package_dir asar)/node_modules/asar/bin/asar"
-	echo "asar" $@
-	enode_electron "${asar}" $@ || die
-}
+#easar() {
+#	local asar="${WORKDIR}/$(package_dir asar)/node_modules/asar/bin/asar"
+#	echo "asar" $@
+#	enode_electron "${asar}" $@ || die
+#}
 
 package_dir() {
 	local binmod="${1//-/_}"
@@ -206,9 +206,9 @@ src_prepare() {
 		./atom.sh \
 		|| die
 
-	sed -i -e "s|{{ATOM_RESOURCE_PATH}}|${install_dir}/app.asar|g" \
-		./atom.sh \
-		|| die
+	#sed -i -e "s|{{ATOM_RESOURCE_PATH}}|${install_dir}/app.asar|g" \
+	#	./atom.sh \
+	#	|| die
 
 	local env="export NPM_CONFIG_NODEDIR=$(get_electron_nodedir)"
 	sed -i -e \
@@ -260,7 +260,7 @@ src_prepare() {
 	done
 
 	# Unpack app.asar
-	easar extract "${S}/usr/share/atom/resources/app.asar" "${S}/build/app"
+	#easar extract "${S}/usr/share/atom/resources/app.asar" "${S}/build/app"
 
 	cd "${S}" || die
 
@@ -319,10 +319,10 @@ src_compile() {
 
 	# Re-pack app.asar
 	# Keep unpack rules in sync with build/tasks/generate-asar-task.coffee
-	cd "${S}/build" || die
-	x="--unpack={*.node,ctags-config,ctags-linux,**/node_modules/spellchecker/**,**/resources/atom.png}"
-	easar pack "${x}" "app" "app.asar"
-	cd "${S}" || die
+	#cd "${S}/build" || die
+	#x="--unpack={*.node,ctags-config,ctags-linux,**/node_modules/spellchecker/**,**/resources/atom.png}"
+	#easar pack "${x}" "app" "app.asar"
+	#cd "${S}" || die
 }
 
 _fix_binmods() {
@@ -375,15 +375,15 @@ src_install() {
 	cd "${S}" || die
 
 	# Replace vendored ctags with a symlink to system ctags
-	rm "${S}/build/app.asar.unpacked/${ctags_d}/ctags-linux" || die
-	ln -s "/usr/bin/ctags" \
-		"${S}/build/app.asar.unpacked/${ctags_d}/ctags-linux" || die
+	#rm "${S}/build/app.asar.unpacked/${ctags_d}/ctags-linux" || die
+	#ln -s "/usr/bin/ctags" \
+	#	"${S}/build/app.asar.unpacked/${ctags_d}/ctags-linux" || die
 
 	insinto "${install_dir}"
 
-	doins build/app.asar
-	doins -r build/app.asar.unpacked
-	doins -r usr/share/atom/resources/app
+	#doins build/app.asar
+	#doins -r build/app.asar.unpacked
+	#doins -r usr/share/atom/resources/app
 
 	insinto /usr/share/applications/
 	newins usr/share/applications/atom.desktop "atom${suffix}.desktop"
