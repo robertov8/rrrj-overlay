@@ -3,11 +3,11 @@
   <repo priority="50" quality="experimental">
     <name>rrrj</name>
     <description>Gentoo-overlay</description>
-    <homepage>https://github.com/robertov82008/rrrj-overlay.git</homepage>
+    <homepage>https://github.com/robertov82008/rrrj</homepage>
     <owner>
       <email>robertov82008@gmail.com</email>
       <name>Roberto Ribeiro</name>
     </owner>
-    <source type="git">https://github.com/robertov82008/rrrj-overlay.git</source>
+    <source type="git">https://github.com/robertov82008/rrrj</source>
   </repo>
 </repositories>
