@@ -6,10 +6,10 @@
 root # layman \
 -o https://raw.githubusercontent.com/robertov82008/rrrj/master/profiles/repositories.xml \
 -f \
--a rrrj
+-a rrrj-overlay
 ```
 
-`root # layman -a rrrj`
+`root # layman -a rrrj-overlay`
 
 `root # layman-updater -R`
 
@@ -37,4 +37,4 @@ root # layman \
 
 #### Generate Manifest
 
-`project/category/app $ ebuild app.ebuild manifest` 
+`project/category/app $ ebuild app.ebuild manifest`
