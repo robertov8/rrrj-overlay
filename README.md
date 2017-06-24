@@ -9,8 +9,6 @@ root # layman \
 -a rrrj-overlay
 ```
 
-`root # layman -a rrrj-overlay`
-
 `root # layman-updater -R`
 
 
