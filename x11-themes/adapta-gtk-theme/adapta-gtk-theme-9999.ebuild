@@ -31,7 +31,8 @@ DEPEND="
         >=dev-ruby/bundler-1.11
         media-gfx/inkscape
         dev-libs/libxml2:2
-	dev-libs/libsass
+	dev-libs/libsass-9999::rrrj
+	dev-lang/sassc-9999::rrrj
 "
 RDEPEND="${DEPEND}"
 
