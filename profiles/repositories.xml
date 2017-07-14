@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <repositories encoding="UTF-8" version="1.1">
   <repo priority="50" quality="experimental">
-    <name>rrrj</name>
+    <name>rrrj-overlay</name>
     <description>Gentoo-overlay</description>
     <homepage>https://github.com/robertov82008/rrrj-overlay</homepage>
     <owner>
