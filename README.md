@@ -4,9 +4,9 @@
 
 ```
 root # layman \
--o https://raw.githubusercontent.com/robertov82008/rrrj/master/profiles/repositories.xml \
+-o https://raw.githubusercontent.com/robertov82008/rrrj-overlay/master/profiles/repositories.xml \
 -f \
--a rrrj
+-a rrrj-overlay
 ```
 
 `root # layman-updater -R`
